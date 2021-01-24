@@ -6,10 +6,17 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXFileReference section */
+		40D80DB925BDE7890014DC7A /* tcp-server.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "tcp-server.cpp"; sourceTree = "<group>"; };
+		40D80DBA25BDE7890014DC7A /* server.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = server.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		40D80DB225BDE7640014DC7A = {
 			isa = PBXGroup;
 			children = (
+				40D80DB925BDE7890014DC7A /* tcp-server.cpp */,
+				40D80DBA25BDE7890014DC7A /* server.hpp */,
 			);
 			sourceTree = "<group>";
 		};
