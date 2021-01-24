@@ -10,12 +10,16 @@
 		40D80DB925BDE7890014DC7A /* tcp-server.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "tcp-server.cpp"; sourceTree = "<group>"; };
 		40D80DBA25BDE7890014DC7A /* server.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = server.hpp; sourceTree = "<group>"; };
 		40D80DBC25BE2C090014DC7A /* tcp-client.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "tcp-client.cpp"; sourceTree = "<group>"; };
+		40D80DBE25BE31DB0014DC7A /* udp-server.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "udp-server.cpp"; sourceTree = "<group>"; };
+		40D80DBF25BE31DB0014DC7A /* udp-client.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "udp-client.cpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		40D80DB225BDE7640014DC7A = {
 			isa = PBXGroup;
 			children = (
+				40D80DBE25BE31DB0014DC7A /* udp-server.cpp */,
+				40D80DBF25BE31DB0014DC7A /* udp-client.cpp */,
 				40D80DBC25BE2C090014DC7A /* tcp-client.cpp */,
 				40D80DB925BDE7890014DC7A /* tcp-server.cpp */,
 				40D80DBA25BDE7890014DC7A /* server.hpp */,
