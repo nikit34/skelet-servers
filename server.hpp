@@ -10,7 +10,7 @@
 // wrapper ?
 #define EXIT(s) exit(s)
 // wrapper and check correct
-#define CLOSE(s) if (close(s)) error(1, errno, "ошибка close")
+#define CLOSE(s) if (close(s)) error(1, errno, "error close")
 // set err status
 #define set_errno(e) errno = (e)
 // wrapper ?
