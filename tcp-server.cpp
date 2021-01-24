@@ -5,6 +5,11 @@
 void set_address(char* hname, char* sname, struct sockaddr_in *sap, char *protocol);
 void error(int status, int err, char *format, ...);
 
+static void server(SOCKET s, struct sockaddr_in **peerp){
+    send(s, "hello", 5, 0);
+}
+
+
 int main(int argc, char ** argv) {
     struct sockaddr_in local;
     struct sockaddr_in peer;
