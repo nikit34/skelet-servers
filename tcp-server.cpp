@@ -1,6 +1,42 @@
 #include "server.hpp"
 
 
+
+static void set_address(char* hname, char* sname, struct sockaddr_in *sap, char *protocol){
+    struct servent *sp;
+    struct hostent *hp;
+    char *endptr;
+    short port;
+    
+    bzero(sap, sizeof(*sap));
+    // AF_INET - pointer on Internet interface
+    sap->sin_family = AF_INET;
+    
+    //for host
+    if(hname != NULL){
+        // this numberly address
+        if(!inet_aton(hname, &sap->sin_addr)){
+            // this strings address
+            hp = gethostbyname(hname);
+            if(hp == NULL)
+                error(1, 0, "undefined host: %s\n", hname);
+            sap->sin_addr = *(struct in_addr * )hp->h_addr;
+        }
+    } else
+        // default value
+        sap->sin_addr.s_addr = htonl(INADDR_ANY);
+    
+    // always for server
+    port = strtol(sname, &endptr, 0);
+    
+    if(*endptr == '\0')
+        sap->sin_port = htons(port);
+    else{
+        sp = getservbyname(sname, protocol);
+    }
+}
+
+
 int main(int argc, char ** argv) {
     struct sockaddr_in local;
     struct sockaddr_in peer;
